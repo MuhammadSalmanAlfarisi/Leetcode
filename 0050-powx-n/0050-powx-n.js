@@ -11,12 +11,9 @@ var myPow = function (x, n) {
         n = -n
     }
     // recursion x1 * x2 * ... * xn
-    if (n % 2 === 0) {
-
-        let halfPower = myPow(x, n / 2);
-        return halfPower * halfPower;
+    if (n % 2 == 0) {
+        let half = myPow(x, n / 2);
+        return half * half;
     }
-    else {
-        return x * myPow(x, n - 1);
-    }
+    else return x * myPow(x, n - 1);
 };
