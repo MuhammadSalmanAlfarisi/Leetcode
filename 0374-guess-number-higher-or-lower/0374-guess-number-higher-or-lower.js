@@ -17,8 +17,8 @@ var guessNumber = function (n) {
         const getGuess = guess(mid)
 
         if (getGuess == 0) return mid
-        else if (getGuess == 1) return getNumber(mid + 1, end)
-        else return getNumber(start, mid - 1)
+        if (getGuess == 1) return getNumber(mid + 1, end)
+        if (getGuess == -1) return getNumber(start, mid - 1)
     }
     return getNumber(0, n)
 };
